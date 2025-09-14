@@ -61,7 +61,7 @@ export function DCMtoMockDevice(deviceStore: DeviceStore, templateDevice: Device
         let nameFound: boolean = false;
 
         for (const document of dcm) {
-            if (document['@context'] && document['@context'].indexOf('dtmi:dtdl:context;2') > 0 && document.contents) {
+            if (document['@context'] && document['@context'].indexOf('dtmi:dtdl:context;2') > -1 && document.contents) {
 
                 if (document['@id'] && modules.indexOf(document['@id']) > -1) {
 
